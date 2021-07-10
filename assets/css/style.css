@@ -1,0 +1,84 @@
+header{
+    grid-area:header;
+}
+.horiz_banner{
+    grid-area: horiz_banner;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+.grid{
+    display: grid;
+    gap: 20px;
+    min-height: 100vh;
+    grid-template-rows: auto 0.25fr 1fr auto;
+    grid-template-areas:    'header'
+                            'horiz_banner'
+                            'main'
+                            'footer';
+}
+
+.horiz_banner{
+    display: grid;
+    gap:20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.1fr;
+    grid-template-areas:"banner_top"
+                        "banner_bottom";
+}
+.banner_top{
+    grid-area: banner_top;
+}
+.banner_bottom{
+    grid-area: banner_bottom;
+}
+
+
+.banner_bottom{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.card-img-overlay h5.card-title,.card-img-overlay p.card-text{
+    text-shadow: 1px 2px 3px #000;
+}
+
+
+footer{
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(2, 1fr, auto);
+}
+
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+.cards{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.banner_top img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
